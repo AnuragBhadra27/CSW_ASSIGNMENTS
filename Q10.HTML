@@ -1,18 +1,53 @@
 <!DOCTYPE html>
-<html>
 <head>
-	<title>Linear Motion Equation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        input, select {
+            margin: 10px 0;
+            padding: 10px;
+        }
+        .submit-btn {
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-	<h1><strong>S = vᵢt + ½at²: The Equation of Linear Motion</strong></h1>
-	<p>The formula S = vᵢt + ½at² describes the motion of an object under constant acceleration. Here:</p>
-	<ul>
-		<li><i>S</i> represents the displacement,</li>
-		<li><i>vᵢ</i> is the initial velocity,</li>
-		<li><i>t</i> is the time,</li>
-		<li><i>a</i> is the acceleration, and</li>
-		<li><i>½at²</i> is the additional displacement due to acceleration.</li>
-	</ul>
-	<p>"An object in motion stays in motion unless acted upon by an <u>external force</u>."</p>
+    <img src="SOA-PNG.png" alt="SOA Logo" style="width:100px; margin-bottom: 20px;">
+    <form>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <input type="email" placeholder="Email" required>
+        <label>
+            <input type="radio" name="gender" value="male"> Male
+        </label>
+        <label>
+            <input type="radio" name="gender" value="female"> Female
+        </label>
+        <select required>
+            <option value="" disabled selected>Select a country</option>
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+        </select>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
 </body>
 </html>

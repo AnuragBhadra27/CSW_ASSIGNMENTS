@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style>
+        .hover-image {
+            width: 100px;
+        }
+        .special-div {
+            transition: color 0.3s;
+        }
+        .hovered {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="special-div">My Special Div</div>
+    <img class="hover-image" src="bg2.webp" alt="Hover me" onmouseover="changeColor()" onmouseout="resetColor()">
+    
+    <script>
+        function changeColor() {
+            document.querySelector('.special-div').classList.add('hovered');
+        }
+        
+        function resetColor() {
+            document.querySelector('.special-div').classList.remove('hovered');
+        }
+    </script>
+</body>
+</html>

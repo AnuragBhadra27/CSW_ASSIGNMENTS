@@ -1,17 +1,41 @@
-
 <!DOCTYPE html>
-<html>
 <head>
-	<title>My Hobbies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Dropdown</title>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content div {
+            padding: 12px 16px;
+            color: black;
+            cursor: pointer;
+        }
+        .dropdown-content div:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-	<h1>My Hobbies</h1>
-	<ul>
-		<li>Reading</li>
-		<li>Coding</li>
-		<li><a href="https://www.codecademy.com/learn/learn-python" target="_blank">Learning Python</a></li>
-		<li>Writing</li>
-		<li>Role-playing</li>
-	</ul>
+    <div class="dropdown">
+        <button>Dropdown</button>
+        <div class="dropdown-content">
+            <div style="font-family: Arial; font-size: 14px;">Option 1</div>
+            <div style="font-family: 'Courier New'; font-size: 16px;">Option 2</div>
+            <div style="font-family: Georgia; font-size: 18px;">Option 3</div>
+        </div>
+    </div>
 </body>
 </html>
